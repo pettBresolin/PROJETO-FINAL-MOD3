@@ -299,7 +299,7 @@ export const swaggerDocument = {
           }
         }
       },
-      '/characters/id-character/{id}': {
+      '/characters/find/{id}': {
         get: {
           summary: 'Search for a character by ID',
           description: 'Route responsible for searching for a character by ID',
@@ -377,7 +377,7 @@ export const swaggerDocument = {
           }
         }
       },
-      '/characters/create-character': {
+      '/characters/create': {
         post: {
           summary: 'register a character',
           description: 'Route responsible for registering a character',
@@ -430,7 +430,7 @@ export const swaggerDocument = {
           }
         }
       },
-      '/characters/update-character/{id}': {
+      '/characters/update/{id}': {
         patch: {
           summary: 'Edit a character by ID',
           description: 'Route responsible for editing a character by ID',
