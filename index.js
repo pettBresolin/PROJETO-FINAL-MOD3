@@ -1,5 +1,7 @@
 import express, { Router } from "express";
 import cors from "cors";
+import * as dotenv from "dotenv";
+dotenv.config();
 import swagger from "swagger-ui-express";
 import { swaggerDocument } from "./docs/swagger.js";
 
@@ -13,7 +15,6 @@ await ConnectDb.ConnectDb();
 
 const app = express();
 const router = Router();
-
 
 const user = makeUserFactory(router);
 const character = makeCharacterFactory(router);
