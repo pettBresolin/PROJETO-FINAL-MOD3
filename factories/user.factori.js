@@ -1,5 +1,5 @@
 import { UserRepositoryMongoDb } from "../database/repositories/userRepository.js";
-import { FindUserByIdUserCase } from "../services/usecases/user/findUserById.js";
+import { FindUserByIdUseCase } from "../services/usecases/user/findUserById.js";
 import { CreateUserUseCase } from "../services/usecases/user/createUser.js";
 import { UpdateUserUseCase } from "../services/usecases/user/updateUser.js";
 import { FindAllUserUseCase } from "../services/usecases/user/findAllUsers.js";
@@ -12,7 +12,7 @@ export function makeUserFactory(router) {
   const userRepository = new UserRepositoryMongoDb();
 
   const createUserUseCase = new CreateUserUseCase(userRepository);
-  const findUserByIdUseCase = new FindUserByIdUserCase(userRepository);
+  const findUserByIdUseCase = new FindUserByIdUseCase(userRepository);
   const updateUserUseCase = new UpdateUserUseCase(
     userRepository,
     findUserByIdUseCase
