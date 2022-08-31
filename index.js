@@ -11,9 +11,6 @@ import { makeAuthFactory } from "./factories/auth.factori.js";
 const ConnectDb = new MongoDbConnection();
 await ConnectDb.ConnectDb();
 
-//const swagger = require ('swagger-ui-express')();
-//const swaggerDocument = require("./docs/swagger.json");
-
 const app = express();
 const router = Router();
 
